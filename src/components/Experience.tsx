@@ -128,7 +128,7 @@ const EXPERIENCE_STYLE = cva("", {
 const Experience = () => {
   return (
     <section
-      id="experience"
+      id="Experience"
       className={cn(EXPERIENCE_STYLE({ variant: "section" }))}
     >
       <div className={cn(EXPERIENCE_STYLE({ variant: "topContainer" }))}>

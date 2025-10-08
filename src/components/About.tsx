@@ -121,7 +121,7 @@ const ABOUT_STYLE = cva("", {
 
 const About = () => {
   return (
-    <section id="about" className={cn(ABOUT_STYLE({ variant: "section" }))}>
+    <section id="About" className={cn(ABOUT_STYLE({ variant: "section" }))}>
       <div className={cn(ABOUT_STYLE({ variant: "topContainer" }))}>
         <div className={cn(ABOUT_STYLE({ variant: "contentHolder" }))}>
           {/* Section Header */}

@@ -48,7 +48,7 @@ const HERO_STYLE = cva("", {
 
 const Hero = () => {
   return (
-    <section id="home" className={cn(HERO_STYLE({ variant: "section" }))}>
+    <section id="Home" className={cn(HERO_STYLE({ variant: "section" }))}>
       <div className={cn(HERO_STYLE({ variant: "topContainer" }))}>
         <div className={cn(HERO_STYLE({ variant: "contentHolder" }))}>
           <HeroProfile />
@@ -62,10 +62,8 @@ const Hero = () => {
           </h2>
 
           <p className={cn(HERO_STYLE({ variant: "introduction" }))}>
-            Passionate software developer with expertise in modern web
-            technologies. I love creating efficient, scalable solutions and
-            contributing to open-source projects. Always eager to learn and
-            tackle new challenges.
+            Passionate software developer with a strong foundation in full-stack
+            development, cloud systems, and DevOps.
           </p>
 
           <Card className="p-6 max-w-md mx-auto">

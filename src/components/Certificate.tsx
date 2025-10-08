@@ -20,7 +20,7 @@ const CERT_GRID_STYLE = cva("", {
       certIssuer: "text-sm text-muted-foreground font-medium",
       credentialContainer: "mb-4 p-3 bg-muted/50 rounded-lg",
       credentialText: "text-xs text-muted-foreground mb-1",
-      credentialCode: "font-mono text-sm break-all",
+      credentialCode: "text-xs font-mono break-all",
     },
   },
 });
@@ -84,7 +84,7 @@ const CERTIFICATE_STYLE = cva("", {
 const Certificate = () => {
   return (
     <section
-      id="certificate"
+      id="Certificates"
       className={cn(CERTIFICATE_STYLE({ variant: "section" }))}
     >
       <div className={cn(CERTIFICATE_STYLE({ variant: "topContainer" }))}>

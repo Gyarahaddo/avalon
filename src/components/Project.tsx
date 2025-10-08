@@ -15,9 +15,13 @@ import { projects } from "@avalon/configs/galahad";
 const PROJECT_CONTENT_STYLE = cva("", {
   variants: {
     variant: {
-      gridContainer: "grid md:grid-cols-2 gap-8",
+      gridContainer: "grid md:grid-cols-2 lg:grid-cols-3 gap-6",
       cardHover: "group hover:shadow-md transition-all duration-200",
-      projectName: "flex items-center justify-between text-lg",
+      projectHeaderContainer: "flex items-center justify-between text-lg",
+      projectTitleContainer: "flex items-center space-x-3",
+      projectIconContainer:
+        "w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0",
+      projectIcon: "h-10.5 w-10.5 rounded-lg text-primary",
       projectDescription: "text-muted-foreground text-sm mb-4",
       projectLabels: "flex flex-wrap gap-1 mb-4",
     },
@@ -36,10 +40,32 @@ const ProjectContent = () => {
             <CardHeader>
               <CardTitle
                 className={cn(
-                  PROJECT_CONTENT_STYLE({ variant: "projectName" }),
+                  PROJECT_CONTENT_STYLE({ variant: "projectHeaderContainer" }),
                 )}
               >
-                <span>{project.name}</span>
+                <div
+                  className={cn(
+                    PROJECT_CONTENT_STYLE({
+                      variant: "projectTitleContainer",
+                    }),
+                  )}
+                >
+                  <div
+                    className={cn(
+                      PROJECT_CONTENT_STYLE({
+                        variant: "projectIconContainer",
+                      }),
+                    )}
+                  >
+                    <img
+                      src={project.image}
+                      className={cn(
+                        PROJECT_CONTENT_STYLE({ variant: "projectIcon" }),
+                      )}
+                    />
+                  </div>
+                  <span>{project.name}</span>
+                </div>
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -93,7 +119,7 @@ const PROJECT_STYLE = cva("", {
       topContainer: "container mx-auto",
       contentHolder: "max-w-6xl mx-auto",
       headerContainer: "text-center mb-16",
-      headerTitle: "text-3xl md:text-4xl mb-4",
+      headerTitle: "text-5xl md:text-4xl mb-4",
       headerIntro: "text-muted-foreground text-lg max-w-2xl mx-auto",
     },
   },
@@ -102,7 +128,7 @@ const PROJECT_STYLE = cva("", {
 const Project = () => {
   return (
     <section
-      id="certificate"
+      id="Projects"
       className={cn(PROJECT_STYLE({ variant: "section" }))}
     >
       <div className={cn(PROJECT_STYLE({ variant: "topContainer" }))}>
@@ -112,7 +138,7 @@ const Project = () => {
             <h2 className="text-3xl md:text-4xl mb-4">Projects</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               A collection of projects I've worked on, ranging from web
-              applications to open-source contributions.
+              applications to data analysis solutions.
             </p>
           </div>
 

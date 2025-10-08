@@ -1,10 +1,17 @@
 import { Moon, Sun } from "lucide-react";
 import { cva } from "class-variance-authority";
 
-import { HeaderButton } from "@avalon/components/ui/buttons";
+import { HeaderButton, ThemeButton } from "@avalon/components/ui/buttons";
 import { cn } from "@avalon/components/ui/utils";
+import { scrollToSection } from "@avalon/components/ui/dom";
 
-const Header = () => {
+const Header = ({
+  isDark,
+  switchTheme,
+}: {
+  isDark: boolean;
+  switchTheme: () => void;
+}) => {
   const HEADER_STYLE = cva([
     "fixed",
     "top-0",
@@ -18,7 +25,7 @@ const Header = () => {
   ]);
 
   const THEME_BUTTON_STYLE = cva([
-    "size-9",
+    "size-12",
     "inline-flex",
     "items-center",
     "justify-center",
@@ -56,29 +63,6 @@ const Header = () => {
     "Certificates",
   ];
 
-  const isDarkMode = false;
-
-  const switchTheme = () => {
-    const debugMessage = {
-      level: "debug",
-      code_file: "Home.tsx",
-      function_name: "switchTheme",
-    };
-
-    console.debug(JSON.stringify(debugMessage));
-  };
-
-  const navTo = (item: string) => {
-    const debugMessage = {
-      level: "debug",
-      code_file: "Home.tsx",
-      function_name: "navTo",
-      params: [item],
-    };
-
-    console.debug(JSON.stringify(debugMessage));
-  };
-
   return (
     <header className={cn(HEADER_STYLE())}>
       <div className="container mx-auto px-4">
@@ -91,18 +75,18 @@ const Header = () => {
               <HeaderButton
                 key={index}
                 buttonName={item}
-                onClick={() => navTo(item)}
+                onClick={() => scrollToSection(`#${item}`)}
               />
             ))}
           </nav>
           <div className="flex items-center space-x-2">
-            <button className={cn(THEME_BUTTON_STYLE)} onClick={switchTheme}>
-              {isDarkMode ? (
-                <Sun className="h-4 w-4" />
+            <ThemeButton className="h-9 w-9" onClick={() => switchTheme()}>
+              {isDark ? (
+                <Sun className="h-5 w-5" />
               ) : (
-                <Moon className="h-4 w-4" />
+                <Moon className="h-5 w-5" />
               )}
-            </button>
+            </ThemeButton>
           </div>
         </div>
       </div>

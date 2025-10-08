@@ -40,11 +40,11 @@ const QUICK_LINKS = [
   { name: "Oracle Cloud", link: "https://cloud.oracle.com/login" },
 ];
 const FOOTER_CONTENT = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Certificates", href: "#certificates" },
+  { label: "Home", href: "#Home" },
+  { label: "About", href: "#About" },
+  { label: "Experience", href: "#Experience" },
+  { label: "Projects", href: "#Projects" },
+  { label: "Certificates", href: "#Certificates" },
 ];
 
 const FooterLinks = () => {
