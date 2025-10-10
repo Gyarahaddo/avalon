@@ -69,15 +69,6 @@ export const ProjectButton: React.FC<ProjectButtonProps> = ({
   );
 };
 
-const NAV_BUTTON_HOVER_STYLES = cva("", {
-  variants: {
-    variant: {
-      header:
-        "absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full",
-    },
-  },
-});
-
 type NavButtonProps = {
   buttonName?: string;
   className?: string;
