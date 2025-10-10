@@ -14,7 +14,7 @@ import { cn } from "@avalon/components/ui/utils";
 const EXPERIENCE_CONTENT_STYLE = cva("", {
   variants: {
     variant: {
-      cardHover: "hover:shadow-md transition-all duration-200",
+      cardHover: "hover:shadow-md transition-all duration-200 dark:bg-muted/30",
       cardHeaderContainer: "flex items-start justify-between",
       cardTitle: "text-xl flex items-center",
       cardTitleIcon: "mr-2 h-5 w-5 text-primary",

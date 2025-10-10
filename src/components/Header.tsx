@@ -18,7 +18,7 @@ const Header = ({
     "left-0",
     "right-0",
     "z-50",
-    "bg-background/80",
+    "bg-background/60",
     "backdrop-blur-md",
     "border-b",
     "border-border",

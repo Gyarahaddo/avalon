@@ -12,9 +12,11 @@ const Home = () => {
 
   const switchTheme = () => {
     if (isDark) {
+      document.documentElement.classList.remove("dark");
       setIsDark(false);
       console.log("LOG: Switched to light mode");
     } else {
+      document.documentElement.classList.add("dark");
       setIsDark(true);
       console.log("Switched to dark mode");
     }
@@ -27,7 +29,7 @@ const Home = () => {
         <Hero />
         <About />
         <Experience />
-        <Certificate />
+        <Certificate isDark={isDark} />
         <Project />
       </main>
       <Footer />
