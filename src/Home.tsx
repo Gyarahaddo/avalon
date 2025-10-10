@@ -13,7 +13,7 @@ const Home = () => {
   const switchTheme = () => {
     if (isDark) {
       setIsDark(false);
-      console.log("Switched to light mode");
+      console.log("LOG: Switched to light mode");
     } else {
       setIsDark(true);
       console.log("Switched to dark mode");
