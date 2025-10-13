@@ -30,8 +30,8 @@ const Header = ({
     "Home",
     "About",
     "Experience",
-    "Projects",
     "Certificates",
+    "Projects",
   ];
 
   return (

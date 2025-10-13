@@ -6,7 +6,7 @@ export const profile = {
   title: "DevOps Engineer & Full Stack Developer",
   avatar_link: "src/assets/galahad.png",
   introduction:
-    "Passionate software developer with a strong foundation in full-stackdevelopment, cloud systems, and DevOps.",
+    "Passionate software developer with a strong foundation in full-stack development, cloud systems, and DevOps.",
 };
 
 export const links = [
