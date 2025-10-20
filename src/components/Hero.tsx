@@ -4,8 +4,6 @@ import { cva } from "class-variance-authority";
 import { profile, links } from "@avalon/configs/galahad";
 import { cn } from "@avalon/components/ui/utils";
 
-const PROFILE_IMAGE_PATH = "src/assets/galahad.png";
-
 const HERO_PROFILE_STYLE = cva("", {
   variants: {
     variant: {
@@ -23,7 +21,7 @@ const HeroProfile = () => {
     <div className={cn(HERO_PROFILE_STYLE({ variant: "outerContainer" }))}>
       <div className={cn(HERO_PROFILE_STYLE({ variant: "innerContainer" }))}>
         <img
-          src={PROFILE_IMAGE_PATH}
+          src={profile.avatar_link}
           alt="Profile Photo"
           className={cn(HERO_PROFILE_STYLE({ variant: "roundImage" }))}
         />
@@ -62,11 +60,10 @@ const Hero = () => {
           </h2>
 
           <p className={cn(HERO_STYLE({ variant: "introduction" }))}>
-            Passionate software developer with a strong foundation in full-stack
-            development, cloud systems, and DevOps.
+            {profile.introduction}
           </p>
 
-          <Card className="p-6 max-w-md mx-auto">
+          <Card className="p-6 max-w-md mx-auto dark:bg-muted/20">
             <h3 className="mb-4 text-center">Connect with me</h3>
             <div className="flex justify-center space-x-6">
               {links.map((link) => {

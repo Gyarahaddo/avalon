@@ -4,7 +4,9 @@ export const profile = {
   first_name: "Galahad",
   last_name: "Zhao",
   title: "DevOps Engineer & Full Stack Developer",
-  avatar_link: "",
+  avatar_link: "src/assets/galahad.png",
+  introduction:
+    "Passionate software developer with a strong foundation in full-stack development, cloud systems, and DevOps.",
 };
 
 export const links = [
@@ -221,29 +223,34 @@ export const certificates = [
     issuer: "Amazon Web Services (AWS)",
     credentialId: "076LDDVC4E1Q1Q5S",
     logoSrc: "src/assets/aws-sap.png",
+    logoSrcDark: "src/assets/aws-sap-dark.png",
   },
   {
     name: "AWS Certified Solution Architect - Associate",
     issuer: "Amazon Web Services (AWS)",
     credentialId: "YKV4YK3KNJFE1K95",
     logoSrc: "src/assets/aws-saa.png",
+    logoSrcDark: "src/assets/aws-saa-dark.png",
   },
   {
     name: "AWS Certified Developer - Associate",
     issuer: "Amazon Web Services (AWS)",
     credentialId: "YS8486M2N1Q41F3E",
     logoSrc: "src/assets/aws-dev.png",
+    logoSrcDark: "src/assets/aws-dev-dark.png",
   },
   {
     name: "AWS Certified SysOps Administrator - Associate",
     issuer: "Amazon Web Services (AWS)",
     credentialId: "37HC4H4J2NVEQLKD",
     logoSrc: "src/assets/aws-sysops.png",
+    logoSrcDark: "src/assets/aws-sysops-dark.png",
   },
   {
-    name: "Cisco Certified Network Associate",
+    name: "Cisco Certified Network Associate (CCNA)",
     issuer: "Cisco",
     credentialId: "405244167484DNZF",
     logoSrc: "src/assets/cisco-ccna.png",
+    logoSrcDark: "src/assets/cisco-ccna-dark.png",
   },
 ];

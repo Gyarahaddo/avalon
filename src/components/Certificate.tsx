@@ -25,7 +25,7 @@ const CERT_GRID_STYLE = cva("", {
   },
 });
 
-const CertificateGrid = () => {
+const CertificateGrid = ({ isDark }: { isDark: boolean }) => {
   return (
     <div className={cn(CERT_GRID_STYLE({ variant: "gridContainer" }))}>
       {certificates.map((cert, index) => (
@@ -37,7 +37,11 @@ const CertificateGrid = () => {
             <div
               className={cn(CERT_GRID_STYLE({ variant: "certBadgeContainer" }))}
             >
-              <img src={cert.logoSrc} alt={`${cert.name} Badge`} />
+              {isDark ? (
+                <img src={cert.logoSrcDark} alt={`${cert.name} Badge`} />
+              ) : (
+                <img src={cert.logoSrc} alt={`${cert.name} Badge`} />
+              )}
             </div>
             <CardTitle
               className={cn(CERT_GRID_STYLE({ variant: "certTitle" }))}
@@ -81,7 +85,7 @@ const CERTIFICATE_STYLE = cva("", {
   },
 });
 
-const Certificate = () => {
+const Certificate = ({ isDark }: { isDark: boolean }) => {
   return (
     <section
       id="Certificates"
@@ -103,7 +107,7 @@ const Certificate = () => {
           </div>
 
           {/* Section Content */}
-          <CertificateGrid />
+          <CertificateGrid isDark={isDark} />
         </div>
       </div>
     </section>

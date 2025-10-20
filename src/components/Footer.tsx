@@ -119,8 +119,7 @@ const Footer = () => {
                 {profile.first_name} {profile.last_name}
               </h3>
               <p className="text-muted-foreground mb-4 max-w-md">
-                Full Stack Developer passionate about creating innovative
-                solutions and contributing to the open-source community.
+                {profile.introduction}
               </p>
 
               <div className="flex space-x-4">

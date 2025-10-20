@@ -16,7 +16,8 @@ const PROJECT_CONTENT_STYLE = cva("", {
   variants: {
     variant: {
       gridContainer: "grid md:grid-cols-2 lg:grid-cols-3 gap-6",
-      cardHover: "group hover:shadow-md transition-all duration-200",
+      cardHover:
+        "group hover:shadow-md transition-all duration-200 dark:bg-muted/30",
       projectHeaderContainer: "flex items-center justify-between text-lg",
       projectTitleContainer: "flex items-center space-x-3",
       projectIconContainer:
