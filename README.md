@@ -1,8 +1,10 @@
 # Avalon
 
-A personal portfolio website that build with [TypeScript](https://www.typescriptlang.org/), [React](https://react.dev/), and [Tailwind CSS](https://tailwindcss.com/), including introduction, education and experience projects, and contact information.
+A personal portfolio website that is built with [TypeScript](https://www.typescriptlang.org/), [React](https://react.dev/), and [Tailwind CSS](https://tailwindcss.com/).
 
 ## Theme Switch
+
+The site page supports light and dark modes.
 
 <p align="center">
   <img src="doc/preview.png" alt="Page Theme Screenshot" width="80%" />
