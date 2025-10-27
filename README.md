@@ -1,6 +1,8 @@
 # Avalon
 
-A personal portfolio website that build with [TypeScript](https://www.typescriptlang.org/), [React](https://react.dev/), and [Tailwind CSS](https://tailwindcss.com/).
+A personal portfolio website that build with [TypeScript](https://www.typescriptlang.org/), [React](https://react.dev/), and [Tailwind CSS](https://tailwindcss.com/), including introduction, education and experience projects, and contact information.
+
+## Theme Switch
 
 <p align="center">
   <img src="doc/preview.png" alt="Page Theme Screenshot" width="80%" />
@@ -9,4 +11,4 @@ A personal portfolio website that build with [TypeScript](https://www.typescript
 ---
 
 ## License
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
