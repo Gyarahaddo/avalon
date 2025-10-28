@@ -1,6 +1,6 @@
 # Avalon
 
-![Build](https://github.com/Gyarahaddo/avalon/actions/workflows/main.yml/badge.svg)
+![build](https://github.com/Gyarahaddo/avalon/actions/workflows/build.yml/badge.svg)
 
 A personal portfolio website that is built with [TypeScript](https://www.typescriptlang.org/), [React](https://react.dev/), and [Tailwind CSS](https://tailwindcss.com/).
 
