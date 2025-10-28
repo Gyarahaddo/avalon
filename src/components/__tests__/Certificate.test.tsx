@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 
 import Certificate from "../Certificate";
 import { certificates } from "@avalon/configs/galahad";
@@ -21,14 +21,23 @@ describe("Certificate", () => {
     render(<Certificate isDark={false} />);
 
     certificates.forEach((cert) => {
-      expect(screen.getByText(cert.name)).toBeInTheDocument();
-      expect(screen.getByText(cert.issuer)).toBeInTheDocument();
-      expect(screen.getByText(cert.credentialId)).toBeInTheDocument();
-    });
+      const card = screen
+        .getByText(cert.name)
+        .closest('[data-slot="card"]') as HTMLElement | null;
 
-    expect(screen.getAllByText(/credential id/i)).toHaveLength(
-      certificates.length
-    );
+      expect(card).not.toBeNull();
+
+      if (!card) {
+        throw new Error(`Certificate card not found for ${cert.name}`);
+      }
+
+      const cardWithin = within(card);
+
+      expect(cardWithin.getByText(cert.name)).toBeInTheDocument();
+      expect(cardWithin.getByText(cert.issuer)).toBeInTheDocument();
+      expect(cardWithin.getByText(/credential id/i)).toBeInTheDocument();
+      expect(cardWithin.getByText(cert.credentialId)).toBeInTheDocument();
+    });
   });
 
   it("uses the appropriate certificate badge variant depending on the theme", () => {
