@@ -14,7 +14,15 @@ import {
 
 type Case = {
   name: string;
-  Component: ComponentType<any>;
+  Component: ComponentType<
+    | Card
+    | CardHeader
+    | CardTitle
+    | CardDescription
+    | CardAction
+    | CardContent
+    | CardFooter
+  >;
   slot: string;
   tagName: string;
   expectedClasses: string[];
@@ -82,7 +90,7 @@ describe("Card primitives", () => {
           aria-label="card-primitive"
         >
           Content
-        </Component>
+        </Component>,
       );
 
       const element = getByTestId("primitive");
