@@ -50,15 +50,19 @@ describe("Header", () => {
       throw new Error("Theme button not found");
     }
 
-    expect(document.querySelector('[data-lucide="moon"]')).toBeInTheDocument();
-    expect(document.querySelector('[data-lucide="sun"]')).not.toBeInTheDocument();
+    const getThemeIcon = () => themeButton.querySelector("svg");
+
+    const initialIcon = getThemeIcon();
+    expect(initialIcon).not.toBeNull();
+    expect(initialIcon).toHaveClass("lucide-moon");
 
     await user.click(themeButton);
     expect(switchTheme).toHaveBeenCalledTimes(1);
 
     rerender(<Header isDark={true} switchTheme={switchTheme} />);
 
-    expect(document.querySelector('[data-lucide="sun"]')).toBeInTheDocument();
-    expect(document.querySelector('[data-lucide="moon"]')).not.toBeInTheDocument();
+    const updatedIcon = getThemeIcon();
+    expect(updatedIcon).not.toBeNull();
+    expect(updatedIcon).toHaveClass("lucide-sun");
   });
 });
