@@ -66,7 +66,7 @@ jobs:
           output: coverage/badges.svg
           jsonPath: totals.percent_covered
 
-      - name: Deploy
+      - name: Deploy Coverage Badges
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
         with:
