@@ -1,8 +1,7 @@
 # Avalon
 
-![build](https://github.com/Gyarahaddo/avalon/actions/workflows/build.yml/badge.svg)
-![test](https://github.com/Gyarahaddo/avalon/actions/workflows/test.yml/badge.svg)
-![coverage](./coverage/badges.svg)
+![nodeci](https://github.com/Gyarahaddo/avalon/actions/workflows/nodeci.yml/badge.svg)
+![coverage](https://github.com/Gyarahaddo/avalon/blob/gh-pages/badges.svg)
 
 A personal portfolio website that is built with [TypeScript](https://www.typescriptlang.org/), [React](https://react.dev/), and [Tailwind CSS](https://tailwindcss.com/).
 
