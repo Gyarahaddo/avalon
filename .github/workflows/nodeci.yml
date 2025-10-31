@@ -69,7 +69,7 @@ jobs:
           style: classic
           source: coverage/coverage-summary.json
           output: coverage/badges.svg
-          jsonPath: totals.percent_covered
+          jsonPath: total.lines.pct
 
       - name: Deploy Coverage Badges
         uses: peaceiris/actions-gh-pages@v3
