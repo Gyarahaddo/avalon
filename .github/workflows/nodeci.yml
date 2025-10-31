@@ -58,10 +58,13 @@ jobs:
       - name: Test Coverage
         run: yarn coverage
 
-      - name: Generate Cover Badge
-        run: |
-          yarn global add coverage-badges-cli
-          coverage-badges --output coverage/badges.svg
+      - name: Generate Coverage Badges
+        uses: jaywcjlove/coverage-badges-cli@main
+        with:
+          style: classic
+          source: coverage/coverage-summary.json
+          output: coverage/badges.svg
+          jsonPath: totals.percent_covered
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
