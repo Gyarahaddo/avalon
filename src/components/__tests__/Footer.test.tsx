@@ -28,15 +28,6 @@ const QUICK_LINKS = [
 describe("Footer", () => {
   const scrollToSectionMock = vi.mocked(scrollToSection);
 
-  beforeAll(() => {
-    vi.useFakeTimers();
-    vi.setSystemTime(new Date("2025-01-01T00:00:00Z"));
-  });
-
-  afterAll(() => {
-    vi.useRealTimers();
-  });
-
   beforeEach(() => {
     vi.clearAllMocks();
   });
@@ -95,10 +86,12 @@ describe("Footer", () => {
   it("shows the current year and last updated text", () => {
     render(<Footer />);
 
+    const currentYear = new Date().getFullYear();
+
     expect(
       screen.getByText(
         (content) =>
-          content.startsWith("© 2025 Galahad Zhao.") &&
+          content.startsWith(`© ${currentYear} Galahad Zhao.`) &&
           content.includes("React & Tailwind CSS."),
       ),
     ).toBeInTheDocument();
