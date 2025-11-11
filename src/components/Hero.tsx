@@ -35,8 +35,8 @@ const HERO_STYLE = cva("", {
   variants: {
     variant: {
       section: "min-h-screen flex items-center justify-center px-4 pt-16",
-      topContainer: "container mx-auto",
-      contentHolder: "relative max-w-4xl mx-auto text-center",
+      topContainer: "relative container mx-auto",
+      contentHolder: "relative z-10 max-w-4xl mx-auto text-center",
       name: "text-4xl md:text-6xl mb-4 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent",
       title: "text-xl md:text-2xl text-muted-foreground mb-6",
       introduction:
@@ -49,18 +49,18 @@ const Hero = () => {
   return (
     <section id="Home" className={cn(HERO_STYLE({ variant: "section" }))}>
       <div className={cn(HERO_STYLE({ variant: "topContainer" }))}>
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute top-0 left-1/2 h-20 w-full max-w-4xl -translate-x-1/2 overflow-hidden"
+        >
+          <img
+            src={heroBackground}
+            alt=""
+            className="h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
         <div className={cn(HERO_STYLE({ variant: "contentHolder" }))}>
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-x-0 top-0 mx-auto h-20 w-full overflow-hidden"
-          >
-            <img
-              src={heroBackground}
-              alt=""
-              className="h-full w-full object-cover"
-              loading="lazy"
-            />
-          </div>
           <HeroProfile />
 
           <h1 className={cn(HERO_STYLE({ variant: "name" }))}>
