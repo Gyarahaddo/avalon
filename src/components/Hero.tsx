@@ -51,7 +51,7 @@ const Hero = () => {
       <div className={cn(HERO_STYLE({ variant: "topContainer" }))}>
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute top-0 left-1/2 h-20 w-full max-w-4xl -translate-x-1/2 overflow-hidden"
+          className="pointer-events-none absolute -top-8 left-1/2 h-20 w-full max-w-4xl -translate-x-1/2 overflow-hidden md:-top-10"
         >
           <img
             src={heroBackground}
