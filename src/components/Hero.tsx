@@ -3,7 +3,7 @@ import { cva } from "class-variance-authority";
 
 import { profile, links } from "@avalon/configs/galahad";
 import { cn } from "@avalon/components/ui/utils";
-import heroBackground from "@avalon/assets/hero-background.jpg";
+import heroBackground from "@avalon/assets/hero-background-2.jpg";
 
 const HERO_PROFILE_STYLE = cva("", {
   variants: {
@@ -72,7 +72,7 @@ const Hero = () => {
             {profile.introduction}
           </p>
 
-          <Card className="p-6 max-w-md mx-auto dark:bg-muted/20">
+          <Card className="p-6 max-w-md mx-auto bg-muted/30 dark:bg-muted/20">
             <h3 className="mb-4 text-center">Connect with me</h3>
             <div className="flex justify-center space-x-6">
               {links.map((link) => {
