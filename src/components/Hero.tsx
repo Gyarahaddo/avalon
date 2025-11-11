@@ -3,6 +3,7 @@ import { cva } from "class-variance-authority";
 
 import { profile, links } from "@avalon/configs/galahad";
 import { cn } from "@avalon/components/ui/utils";
+import heroBackground from "@avalon/assets/hero-background.jpg";
 
 const HERO_PROFILE_STYLE = cva("", {
   variants: {
@@ -33,8 +34,11 @@ const HeroProfile = () => {
 const HERO_STYLE = cva("", {
   variants: {
     variant: {
-      section: "min-h-screen flex items-center justify-center px-4 pt-16",
-      topContainer: "container mx-auto",
+      section:
+        "relative min-h-screen flex items-center justify-center px-4 pt-16 overflow-hidden bg-cover bg-center",
+      overlay:
+        "pointer-events-none absolute inset-0 bg-gradient-to-br from-background/90 via-background/70 to-background/90 dark:from-background/80 dark:via-background/60 dark:to-background/80",
+      topContainer: "container mx-auto relative z-10",
       contentHolder: "max-w-4xl mx-auto text-center",
       name: "text-4xl md:text-6xl mb-4 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent",
       title: "text-xl md:text-2xl text-muted-foreground mb-6",
@@ -46,7 +50,12 @@ const HERO_STYLE = cva("", {
 
 const Hero = () => {
   return (
-    <section id="Home" className={cn(HERO_STYLE({ variant: "section" }))}>
+    <section
+      id="Home"
+      className={cn(HERO_STYLE({ variant: "section" }))}
+      style={{ backgroundImage: `url(${heroBackground})` }}
+    >
+      <div className={cn(HERO_STYLE({ variant: "overlay" }))} aria-hidden />
       <div className={cn(HERO_STYLE({ variant: "topContainer" }))}>
         <div className={cn(HERO_STYLE({ variant: "contentHolder" }))}>
           <HeroProfile />
