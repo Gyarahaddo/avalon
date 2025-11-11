@@ -1,8 +1,8 @@
 import { Card } from "@avalon/components/ui/cards";
 import { cva } from "class-variance-authority";
 
-import heroBackground from "@avalon/assets/hero-background.svg";
 import { profile, links } from "@avalon/configs/galahad";
+import heroBackground from "@avalon/assets/hero-background.svg";
 import { cn } from "@avalon/components/ui/utils";
 
 const HERO_PROFILE_STYLE = cva("", {
@@ -36,9 +36,7 @@ const HERO_STYLE = cva("", {
     variant: {
       section: "min-h-screen flex items-center justify-center px-4 pt-16",
       topContainer: "container mx-auto",
-      contentHolder:
-        "relative max-w-4xl mx-auto overflow-hidden rounded-3xl bg-background/80 text-center shadow-lg backdrop-blur",
-      backgroundBand: "absolute inset-x-0 top-0 h-20 bg-cover bg-center",
+      contentHolder: "relative max-w-4xl mx-auto text-center",
       name: "text-4xl md:text-6xl mb-4 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent",
       title: "text-xl md:text-2xl text-muted-foreground mb-6",
       introduction:
@@ -53,47 +51,50 @@ const Hero = () => {
       <div className={cn(HERO_STYLE({ variant: "topContainer" }))}>
         <div className={cn(HERO_STYLE({ variant: "contentHolder" }))}>
           <div
-            aria-hidden
-            className={cn(HERO_STYLE({ variant: "backgroundBand" }))}
-            style={{ backgroundImage: `url(${heroBackground})` }}
-          />
-
-          <div className="relative z-10 px-6 pb-12 pt-10 md:px-12">
-            <HeroProfile />
-
-            <h1 className={cn(HERO_STYLE({ variant: "name" }))}>
-              {profile.first_name} {profile.last_name}
-            </h1>
-
-            <h2 className={cn(HERO_STYLE({ variant: "title" }))}>
-              {profile.title}
-            </h2>
-
-            <p className={cn(HERO_STYLE({ variant: "introduction" }))}>
-              {profile.introduction}
-            </p>
-
-            <Card className="p-6 max-w-md mx-auto dark:bg-muted/20">
-              <h3 className="mb-4 text-center">Connect with me</h3>
-              <div className="flex justify-center space-x-6">
-                {links.map((link) => {
-                  const Icon = link.icon;
-                  return (
-                    <a
-                      key={link.name}
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`text-muted-foreground transition-all duration-200 hover:scale-110 ${link.hover_color}`}
-                      title={link.name}
-                    >
-                      <Icon className="w-6 h-6" />
-                    </a>
-                  );
-                })}
-              </div>
-            </Card>
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 top-0 mx-auto h-20 w-full overflow-hidden"
+          >
+            <img
+              src={heroBackground}
+              alt=""
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
           </div>
+          <HeroProfile />
+
+          <h1 className={cn(HERO_STYLE({ variant: "name" }))}>
+            {profile.first_name} {profile.last_name}
+          </h1>
+
+          <h2 className={cn(HERO_STYLE({ variant: "title" }))}>
+            {profile.title}
+          </h2>
+
+          <p className={cn(HERO_STYLE({ variant: "introduction" }))}>
+            {profile.introduction}
+          </p>
+
+          <Card className="p-6 max-w-md mx-auto dark:bg-muted/20">
+            <h3 className="mb-4 text-center">Connect with me</h3>
+            <div className="flex justify-center space-x-6">
+              {links.map((link) => {
+                const Icon = link.icon;
+                return (
+                  <a
+                    key={link.name}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`text-muted-foreground transition-all duration-200 hover:scale-110 ${link.hover_color}`}
+                    title={link.name}
+                  >
+                    <Icon className="w-6 h-6" />
+                  </a>
+                );
+              })}
+            </div>
+          </Card>
         </div>
       </div>
     </section>
