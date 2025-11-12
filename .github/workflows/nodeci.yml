@@ -84,6 +84,7 @@ jobs:
 
   deploy-aws:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
     env:
       PUBLISH_DIR: dist
       S3_BUCKET: avalon-pub
