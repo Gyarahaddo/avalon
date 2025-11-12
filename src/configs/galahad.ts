@@ -1,10 +1,23 @@
 import { Github, Gitlab, Linkedin, Twitter, Mail } from "lucide-react";
+import userAvatar from "@avalon/assets/galahad.png";
+import fgogachaProjecctIcon from "@avalon/assets/fatego-gacha-kami.png";
+import avalonProjectIcon from "@avalon/assets/avalon.png";
+import awsdevIcon from "@avalon/assets/aws-dev.png";
+import awsdevDarkIcon from "@avalon/assets/aws-dev-dark.png";
+import awssaaIcon from "@avalon/assets/aws-saa.png";
+import awssaaDarkIcon from "@avalon/assets/aws-saa-dark.png";
+import awssapIcon from "@avalon/assets/aws-sap.png";
+import awssapDarkIcon from "@avalon/assets/aws-sap-dark.png";
+import awssysopsIcon from "@avalon/assets/aws-sysops.png";
+import awssysopsDarkIcon from "@avalon/assets/aws-sysops-dark.png";
+import ccnaIcon from "@avalon/assets/cisco-ccna.png";
+import ccnaDarkIcon from "@avalon/assets/cisco-ccna-dark.png";
 
 export const profile = {
   first_name: "Galahad",
   last_name: "Zhao",
   title: "DevOps Engineer & Full Stack Developer",
-  avatar_link: "src/assets/galahad.png",
+  avatar_link: userAvatar,
   introduction:
     "Passionate software developer with a strong foundation in full-stack development, cloud systems, and DevOps.",
 };
@@ -195,7 +208,7 @@ export const projects = [
     name: "FateGO Gacha Kami",
     description:
       "Screenshot-based FGO gacha tracker built with Python, OpenCV, and PostgreSQL integration.",
-    image: "src/assets/fatego-gacha-kami.png",
+    image: fgogachaProjecctIcon,
     codebaseUrl: "https://gitlab.com/StHakurei/fatego-gacha-kami",
     technologies: [
       "Python",
@@ -211,7 +224,7 @@ export const projects = [
     name: "Avalon",
     description:
       "A personal website built with React, TypeScript, Tailwind CSS, sharing my journey and experiences.",
-    image: "src/assets/avalon.png",
+    image: avalonProjectIcon,
     codebaseUrl: "https://github.com/Gyarahaddo/avalon",
     technologies: ["React", "TypeScript", "Tailwind CSS", "HTML"],
   },
@@ -222,35 +235,35 @@ export const certificates = [
     name: "AWS Certified Solution Architect - Professional",
     issuer: "Amazon Web Services (AWS)",
     credentialId: "076LDDVC4E1Q1Q5S",
-    logoSrc: "src/assets/aws-sap.png",
-    logoSrcDark: "src/assets/aws-sap-dark.png",
+    logoSrc: awssapIcon,
+    logoSrcDark: awssapDarkIcon,
   },
   {
     name: "AWS Certified Solution Architect - Associate",
     issuer: "Amazon Web Services (AWS)",
     credentialId: "YKV4YK3KNJFE1K95",
-    logoSrc: "src/assets/aws-saa.png",
-    logoSrcDark: "src/assets/aws-saa-dark.png",
+    logoSrc: awssaaIcon,
+    logoSrcDark: awssaaDarkIcon,
   },
   {
     name: "AWS Certified Developer - Associate",
     issuer: "Amazon Web Services (AWS)",
     credentialId: "YS8486M2N1Q41F3E",
-    logoSrc: "src/assets/aws-dev.png",
-    logoSrcDark: "src/assets/aws-dev-dark.png",
+    logoSrc: awsdevIcon,
+    logoSrcDark: awsdevDarkIcon,
   },
   {
     name: "AWS Certified SysOps Administrator - Associate",
     issuer: "Amazon Web Services (AWS)",
     credentialId: "37HC4H4J2NVEQLKD",
-    logoSrc: "src/assets/aws-sysops.png",
-    logoSrcDark: "src/assets/aws-sysops-dark.png",
+    logoSrc: awssysopsIcon,
+    logoSrcDark: awssysopsDarkIcon,
   },
   {
     name: "Cisco Certified Network Associate (CCNA)",
     issuer: "Cisco",
     credentialId: "405244167484DNZF",
-    logoSrc: "src/assets/cisco-ccna.png",
-    logoSrcDark: "src/assets/cisco-ccna-dark.png",
+    logoSrc: ccnaIcon,
+    logoSrcDark: ccnaDarkIcon,
   },
 ];
