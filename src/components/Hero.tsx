@@ -3,7 +3,7 @@ import { cva } from "class-variance-authority";
 
 import { profile, links } from "@avalon/configs/galahad";
 import { cn } from "@avalon/components/ui/utils";
-import heroBackground from "@avalon/assets/hero-background-2.jpg";
+import heroSectionBackground from "@avalon/assets/hero-background.jpg";
 
 const HERO_PROFILE_STYLE = cva("", {
   variants: {
@@ -53,7 +53,7 @@ const Hero = () => {
     <section
       id="Home"
       className={cn(HERO_STYLE({ variant: "section" }))}
-      style={{ backgroundImage: `url(${heroBackground})` }}
+      style={{ backgroundImage: `url(${heroSectionBackground})` }}
     >
       <div className={cn(HERO_STYLE({ variant: "overlay" }))} aria-hidden />
       <div className={cn(HERO_STYLE({ variant: "topContainer" }))}>
