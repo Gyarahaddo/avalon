@@ -2,7 +2,7 @@
 
 ![nodeci](https://github.com/Gyarahaddo/avalon/actions/workflows/nodeci.yml/badge.svg)
 ![coverage](https://github.com/Gyarahaddo/avalon/blob/gh-pages/badges.svg)
- <a href="https://github.com/Gyarahaddo/avalon"><img src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white" alt="website" width="100" /></a>
+ <a href="https://avalon.sainthakurei.moe/"><img src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white" alt="website" width="100" /></a>
 
 A personal portfolio website that is built with [TypeScript](https://www.typescriptlang.org/), [React](https://react.dev/), and [Tailwind CSS](https://tailwindcss.com/).
 
