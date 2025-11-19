@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "@avalon/components/Header";
 import Hero from "@avalon/components/Hero";
 import Footer from "@avalon/components/Footer";
@@ -10,15 +10,27 @@ import Project from "@avalon/components/Project";
 const Home = () => {
   const [isDark, setIsDark] = useState(false);
 
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+
+    if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+      setIsDark(true);
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
+
   const switchTheme = () => {
     if (isDark) {
       document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
       setIsDark(false);
-      console.log("LOG: Switched to light mode");
     } else {
       document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
       setIsDark(true);
-      console.log("Switched to dark mode");
     }
   };
 
