@@ -5,6 +5,10 @@
 
 A personal portfolio website that is built with [TypeScript](https://www.typescriptlang.org/), [React](https://react.dev/), and [Tailwind CSS](https://tailwindcss.com/).
 
+<p align="start">
+  <a href="https://github.com/Gyarahaddo/avalon"><img src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white" alt="website" width="100" /></a>
+</p>
+
 ## Theme Switch
 
 The site page supports light and dark modes.
