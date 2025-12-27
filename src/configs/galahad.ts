@@ -2,6 +2,7 @@ import { Github, Gitlab, Linkedin, Twitter, Mail } from "lucide-react";
 import userAvatar from "@avalon/assets/galahad.png";
 import fgogachaProjecctIcon from "@avalon/assets/fatego-gacha-kami.png";
 import avalonProjectIcon from "@avalon/assets/avalon.png";
+import fgofoumesProjectIcon from "@avalon/assets/fatego-foumes.png";
 import awsdevIcon from "@avalon/assets/aws-dev.png";
 import awsdevDarkIcon from "@avalon/assets/aws-dev-dark.png";
 import awssaaIcon from "@avalon/assets/aws-saa.png";
@@ -227,6 +228,14 @@ export const projects = [
     image: avalonProjectIcon,
     codebaseUrl: "https://github.com/Gyarahaddo/avalon",
     technologies: ["React", "TypeScript", "Tailwind CSS", "HTML"],
+  },
+  {
+    name: "FateGO Foumes",
+    description:
+      "A data analysis tool that processes and visualizes FGO gacha records using Pandas and Matplotlib.",
+    image: fgofoumesProjectIcon,
+    codebaseUrl: "https://gitlab.com/StHakurei/fatego-foumes",
+    technologies: ["Python", "Pandas", "Matplotlib"],
   },
 ];
 
