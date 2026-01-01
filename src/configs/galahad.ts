@@ -276,3 +276,52 @@ export const certificates = [
     logoSrcDark: ccnaDarkIcon,
   },
 ];
+
+export const holdings = {
+  lastUpdate: "2023-09-15",
+  assetAllocation: [
+    {
+      code: "BMNU",
+      link: "https://www.google.com/finance/quote/BMNU:BATS",
+      percentage: 18,
+    },
+    {
+      code: "LAES",
+      link: "https://www.google.com/finance/quote/LAES:NASDAQ",
+      percentage: 10,
+    },
+    {
+      code: "MARA",
+      link: "https://www.google.com/finance/quote/MARA:NASDAQ",
+      percentage: 15,
+    },
+    {
+      code: "SERV",
+      link: "https://www.google.com/finance/quote/SERV:NASDAQ",
+      percentage: 13,
+    },
+    {
+      code: "VG",
+      link: "https://www.google.com/finance/quote/VG:NYSE",
+      percentage: 44,
+    },
+  ],
+  sectorAllocation: [
+    {
+      name: "Energy",
+      percentage: 44,
+    },
+    {
+      name: "Crypto Infrastructure",
+      percentage: 34,
+    },
+    {
+      name: "Machinery",
+      percentage: 12,
+    },
+    {
+      name: "Semiconductors",
+      percentage: 10,
+    },
+  ],
+};
