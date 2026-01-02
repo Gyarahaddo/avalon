@@ -48,7 +48,7 @@ const PortfolioContent = () => {
             >
               {holdings.assetAllocation.map((asset, index) => (
                 <div
-                  key={index}
+                  key={`${index}-${asset.code}`}
                   className={cn(
                     PORTFOLIO_CONTENT_STYLE({ variant: "allocationItem" }),
                     asset.color,
@@ -69,7 +69,10 @@ const PortfolioContent = () => {
           {/* Legend */}
           <div className="space-y-3">
             {holdings.assetAllocation.map((asset, index) => (
-              <div key={index} className="flex items-center justify-between">
+              <div
+                key={`${index}-${asset.code}`}
+                className="flex items-center justify-between"
+              >
                 <div className="flex items-center gap-3">
                   <div className={`${asset.color} `} />
                   <a
@@ -109,7 +112,7 @@ const PortfolioContent = () => {
             <div className="w-full h-8 bg-muted rounded-lg overflow-hidden flex">
               {holdings.sectorAllocation.map((sector, index) => (
                 <div
-                  key={index}
+                  key={`${index}-${sector.name}`}
                   className={cn(
                     PORTFOLIO_CONTENT_STYLE({ variant: "allocationItem" }),
                     sector.color,
@@ -130,7 +133,10 @@ const PortfolioContent = () => {
           {/* Legend */}
           <div className="space-y-3">
             {holdings.sectorAllocation.map((sector, index) => (
-              <div key={index} className="flex items-center justify-between">
+              <div
+                key={`${index}-${sector.name}`}
+                className="flex items-center justify-between"
+              >
                 <div className="flex items-center gap-3">
                   <div
                     className={cn(

@@ -60,7 +60,7 @@ const Header = ({
           <nav className={cn(HEADER_STYLE({ variant: "navigation" }))}>
             {NAV_ITEMS.map((item, index) => (
               <HeaderButton
-                key={index}
+                key={`${index}-${item}`}
                 buttonName={item}
                 onClick={() => {
                   scrollToSection(`#${item}`);
