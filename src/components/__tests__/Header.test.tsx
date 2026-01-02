@@ -44,7 +44,7 @@ describe("Header", () => {
 
     const themeButton = screen
       .getAllByRole("button")
-      .find((button) => button.dataset.slot === "theme-button");
+      .find((button) => button.dataset.slot === "nav-button");
     expect(themeButton).toBeDefined();
     if (!themeButton) {
       throw new Error("Theme button not found");
