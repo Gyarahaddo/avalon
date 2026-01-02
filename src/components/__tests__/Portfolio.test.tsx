@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 
 import Portfolio from "../Portfolio";
 import { holdings } from "@avalon/configs/galahad";
@@ -39,8 +39,15 @@ describe("Portfolio", () => {
       expect(assetLink).toHaveAttribute("href", asset.link);
       expect(assetLink).toHaveAttribute("target", "_blank");
       expect(assetLink).toHaveAttribute("rel", "noopener noreferrer");
+
+      const assetRow = assetLink.closest("div")?.parentElement;
+      if (!assetRow) {
+        throw new Error(`Asset legend row not found for ${asset.code}`);
+      }
+
+      const assetRowUtils = within(assetRow);
       expect(
-        screen.getByText(`${asset.percentage}%`),
+        assetRowUtils.getByText(`${asset.percentage}%`),
       ).toBeInTheDocument();
       expect(
         screen.getByTitle(`${asset.code}: ${asset.percentage}%`),
@@ -52,9 +59,15 @@ describe("Portfolio", () => {
     render(<Portfolio />);
 
     holdings.sectorAllocation.forEach((sector) => {
-      expect(screen.getByText(sector.name)).toBeInTheDocument();
+      const sectorName = screen.getByText(sector.name);
+      const sectorRow = sectorName.closest("div")?.parentElement;
+      if (!sectorRow) {
+        throw new Error(`Sector legend row not found for ${sector.name}`);
+      }
+
+      const sectorRowUtils = within(sectorRow);
       expect(
-        screen.getByText(`${sector.percentage}%`),
+        sectorRowUtils.getByText(`${sector.percentage}%`),
       ).toBeInTheDocument();
       expect(
         screen.getByTitle(`${sector.name}: ${sector.percentage}%`),
