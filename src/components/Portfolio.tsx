@@ -182,7 +182,8 @@ const DisclaimerInfo = () => {
           <strong className="text-foreground">Disclaimer:</strong> This
           information is shared for personal interests and educational purposes
           only. It is not financial advice, investment recommendation, or an
-          endorsement of any securities.
+          endorsement of any securities. Past performance does not guarantee
+          future results.
         </p>
       </div>
     </div>
