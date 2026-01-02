@@ -6,6 +6,7 @@ import About from "@avalon/components/About";
 import Experience from "@avalon/components/Experience";
 import Certificate from "@avalon/components/Certificate";
 import Project from "@avalon/components/Project";
+import Portfolio from "@avalon/components/Portfolio";
 
 const Home = () => {
   const [isDark, setIsDark] = useState(false);
@@ -43,6 +44,7 @@ const Home = () => {
         <Experience />
         <Certificate isDark={isDark} />
         <Project />
+        <Portfolio />
       </main>
       <Footer />
     </>

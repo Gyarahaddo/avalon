@@ -45,6 +45,7 @@ const FOOTER_CONTENT = [
   { label: "Experience", href: "#Experience" },
   { label: "Projects", href: "#Projects" },
   { label: "Certificates", href: "#Certificates" },
+  { label: "Portfolio", href: "#Portfolio" },
 ];
 
 const FooterLinks = () => {
@@ -100,7 +101,7 @@ const FooterCopyright = ({ year }: { year: number }) => {
         React & Tailwind CSS.
       </p>
       <p className="text-muted-foreground text-sm mt-2 md:mt-0">
-        Last updated: October 2025
+        Last updated: January 2026
       </p>
     </div>
   );
