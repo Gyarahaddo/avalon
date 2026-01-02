@@ -64,7 +64,7 @@ describe("NavButton", () => {
     );
 
     const button = screen.getByRole("button", { name: "Toggle theme" });
-    expect(button).toHaveAttribute("data-slot", "theme-button");
+    expect(button).toHaveAttribute("data-slot", "nav-button");
     expect(button).toHaveClass("hover:bg-accent", "size-9", "theme-custom");
 
     fireEvent.click(button);
@@ -81,7 +81,7 @@ describe("NavButton", () => {
 
     const link = screen.getByLabelText("Theme link");
     expect(link.tagName).toBe("A");
-    expect(link).toHaveAttribute("data-slot", "theme-button");
+    expect(link).toHaveAttribute("data-slot", "nav-button");
     expect(link).toHaveClass("hover:bg-accent", "size-9", "link-theme");
 
     fireEvent.click(link);
