@@ -30,7 +30,7 @@ const CertificateGrid = ({ isDark }: { isDark: boolean }) => {
     <div className={cn(CERT_GRID_STYLE({ variant: "gridContainer" }))}>
       {certificates.map((cert, index) => (
         <Card
-          key={index}
+          key={`${index}-${cert.name}`}
           className={cn(CERT_GRID_STYLE({ variant: "cardHover" }))}
         >
           <CardHeader className="text-center">

@@ -91,7 +91,7 @@ const AboutSkillset = () => {
       <Card>
         <CardContent className="p-8 space-y-6">
           {skillsets.map((category, index) => (
-            <div key={index} className="space-y-3">
+            <div key={`${index}-${category.category}`} className="space-y-3">
               <h4 className="font-medium text-foreground">
                 {category.category}
               </h4>
