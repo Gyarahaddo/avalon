@@ -10,7 +10,14 @@ import Header from "../Header";
 import { scrollToSection } from "@avalon/components/ui/dom";
 
 describe("Header", () => {
-  const navItems = ["Home", "About", "Experience", "Certificates", "Projects"];
+  const navItems = [
+    "Home",
+    "About",
+    "Experience",
+    "Certificates",
+    "Projects",
+    "Portfolio",
+  ];
   const scrollToSectionMock = vi.mocked(scrollToSection);
 
   beforeEach(() => {
@@ -40,11 +47,13 @@ describe("Header", () => {
   it("invokes the theme switcher and swaps the icon", async () => {
     const user = userEvent.setup();
     const switchTheme = vi.fn();
-    const { rerender } = render(<Header isDark={false} switchTheme={switchTheme} />);
+    const { rerender } = render(
+      <Header isDark={false} switchTheme={switchTheme} />,
+    );
 
     const themeButton = screen
       .getAllByRole("button")
-      .find((button) => button.dataset.slot === "theme-button");
+      .find((button) => button.dataset.slot === "nav-button");
     expect(themeButton).toBeDefined();
     if (!themeButton) {
       throw new Error("Theme button not found");

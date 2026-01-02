@@ -32,7 +32,7 @@ const ExperienceContent = () => {
     <div className="space-y-8">
       {experiences.map((exp, index) => (
         <Card
-          key={index}
+          key={`${index}-${exp.company}`}
           className={cn(EXPERIENCE_CONTENT_STYLE({ variant: "cardHover" }))}
         >
           <CardHeader>
@@ -83,7 +83,7 @@ const ExperienceContent = () => {
             <ul className="space-y-2 mb-6">
               {exp.duties.map((item, index) => (
                 <li
-                  key={index}
+                  key={`${index}-${item}`}
                   className={cn(
                     EXPERIENCE_CONTENT_STYLE({ variant: "dutyContainer" }),
                   )}
