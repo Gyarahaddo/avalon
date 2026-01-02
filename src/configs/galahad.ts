@@ -278,7 +278,7 @@ export const certificates = [
 ];
 
 export const holdings = {
-  lastUpdate: "2025-12-15",
+  lastUpdate: "December 2025",
   assetAllocation: [
     {
       code: "NASDAQ:BMNU",

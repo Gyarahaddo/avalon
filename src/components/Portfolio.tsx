@@ -220,12 +220,7 @@ const Portfolio = () => {
               allocation.
             </p>
             <p className="text-xs text-muted-foreground mt-2">
-              Last updated:{" "}
-              {new Date(holdings.lastUpdate).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
+              Last updated: {holdings.lastUpdate}
             </p>
           </div>
 
