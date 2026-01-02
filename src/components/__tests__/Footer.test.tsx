@@ -96,8 +96,6 @@ describe("Footer", () => {
       ),
     ).toBeInTheDocument();
 
-    expect(
-      screen.getByText("Last updated: October 2025"),
-    ).toBeInTheDocument();
+    expect(screen.getByText("Last updated: January 2026")).toBeInTheDocument();
   });
 });
