@@ -77,7 +77,7 @@ type NavButtonProps = {
   children?: React.ReactNode;
 };
 
-export const ThemeButton: React.FC<NavButtonProps> = ({
+export const NavButton: React.FC<NavButtonProps> = ({
   className,
   onClick,
   asChild = false,
@@ -87,7 +87,7 @@ export const ThemeButton: React.FC<NavButtonProps> = ({
 
   return (
     <Comp
-      data-slot="theme-button"
+      data-slot="nav-button"
       className={cn(
         generalButtonVariant({ variant: "ghost", size: "icon" }),
         className,

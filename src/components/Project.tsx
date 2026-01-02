@@ -35,7 +35,7 @@ const ProjectContent = () => {
       <div className={cn(PROJECT_CONTENT_STYLE({ variant: "gridContainer" }))}>
         {projects.map((project, index) => (
           <Card
-            key={index}
+            key={`${index}-${project.name}`}
             className={cn(PROJECT_CONTENT_STYLE({ variant: "cardHover" }))}
           >
             <CardHeader>

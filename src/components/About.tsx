@@ -20,7 +20,10 @@ const AboutEducation = () => {
       </h3>
       <div className="space-y-6">
         {educations.map((edu, index) => (
-          <Card key={index} className="hover:shadow-md transition-shadow">
+          <Card
+            key={`${index}-${edu.institution}`}
+            className="hover:shadow-md transition-shadow"
+          >
             <CardHeader>
               <CardTitle className="text-xl">{edu.program}</CardTitle>
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-muted-foreground">
@@ -50,8 +53,12 @@ const AboutEducation = () => {
               <div className="space-y-2">
                 <p className="text-sm font-medium">Relevant Coursework:</p>
                 <div className="flex flex-wrap gap-2">
-                  {edu.courses.map((course) => (
-                    <SecondaryBadge className="text-xs" tagName={course} />
+                  {edu.courses.map((course, index) => (
+                    <SecondaryBadge
+                      key={`${index}-${course}`}
+                      className="text-xs"
+                      tagName={course}
+                    />
                   ))}
                 </div>
               </div>
@@ -84,13 +91,14 @@ const AboutSkillset = () => {
       <Card>
         <CardContent className="p-8 space-y-6">
           {skillsets.map((category, index) => (
-            <div key={index} className="space-y-3">
+            <div key={`${index}-${category.category}`} className="space-y-3">
               <h4 className="font-medium text-foreground">
                 {category.category}
               </h4>
               <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill) => (
+                {category.skills.map((skill, index) => (
                   <OutlineBadge
+                    key={`${index}-${skill}`}
                     className={cn(
                       ABOUT_SKILLSET_STYLE({ variant: "badgeHover" }),
                     )}
