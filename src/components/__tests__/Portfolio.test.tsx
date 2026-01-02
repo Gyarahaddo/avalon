@@ -26,7 +26,7 @@ describe("Portfolio", () => {
     expect(screen.getByText("Disclaimer:")).toBeInTheDocument();
     expect(
       screen.getByText(
-        "This information is shared for personal interests and educational purposes only. It is not financial advice, investment recommendation, or an endorsement of any securities.",
+        "This information is shared for personal interests and educational purposes only. It is not financial advice, investment recommendation, or an endorsement of any securities. Past performance does not guarantee future results.",
       ),
     ).toBeInTheDocument();
   });
