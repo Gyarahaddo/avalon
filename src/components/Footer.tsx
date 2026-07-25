@@ -101,7 +101,7 @@ const FooterCopyright = ({ year }: { year: number }) => {
         React & Tailwind CSS.
       </p>
       <p className="text-muted-foreground text-sm mt-2 md:mt-0">
-        Last updated: January 2026
+        Last updated: July 2026
       </p>
     </div>
   );
