@@ -20,6 +20,7 @@ const EXPERIENCE_CONTENT_STYLE = cva("", {
       cardTitleIcon: "mr-2 h-5 w-5 text-primary",
       infoRow:
         "flex flex-col sm:flex-row sm:items-center gap-2 text-muted-foreground",
+      overview: "mr-2 leading-7 text-muted-foreground",
       dutyContainer: "text-muted-foreground flex items-start",
       dutyContent:
         "inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0",
@@ -80,28 +81,46 @@ const ExperienceContent = () => {
             </div>
           </CardHeader>
           <CardContent>
-            <ul className="space-y-2 mb-6">
-              {exp.duties.map((item, index) => (
-                <li
-                  key={`${index}-${item}`}
-                  className={cn(
-                    EXPERIENCE_CONTENT_STYLE({ variant: "dutyContainer" }),
-                  )}
-                >
-                  <span
+            {exp.overview && (
+              <div className="mb-6">
+                <p className="mb-2 text-sm font-medium">Overview</p>
+                <p className={cn(EXPERIENCE_CONTENT_STYLE({ variant: "overview" }))}>
+                  {exp.overview}
+                </p>
+              </div>
+            )}
+
+            <div className="mb-6">
+              <p className="mb-2 text-sm font-medium">Highlights</p>
+
+              <ul className="space-y-2">
+                {exp.highlights.map((item, index) => (
+                  <li
+                    key={`${index}-${item}`}
                     className={cn(
-                      EXPERIENCE_CONTENT_STYLE({ variant: "dutyContent" }),
+                      EXPERIENCE_CONTENT_STYLE({ variant: "dutyContainer" }),
                     )}
-                  ></span>
-                  {item}
-                </li>
-              ))}
-            </ul>
+                  >
+                    <span
+                      className={cn(
+                        EXPERIENCE_CONTENT_STYLE({ variant: "dutyContent" }),
+                      )}
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             <div className="space-y-2">
-              <p className="text-sm font-medium">Technologies:</p>
+              <p className="text-sm font-medium">Technologies</p>
+
               <div className="flex flex-wrap gap-2">
                 {exp.technologies.map((tech) => (
-                  <OutlineBadge tagName={tech} />
+                  <OutlineBadge
+                    key={`${exp.company}-${tech}`}
+                    tagName={tech}
+                  />
                 ))}
               </div>
             </div>

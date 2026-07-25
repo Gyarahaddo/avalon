@@ -39,9 +39,10 @@ describe("Experience", () => {
       expect(utils.getByText(exp.location)).toBeInTheDocument();
       expect(utils.getByText(exp.period)).toBeInTheDocument();
       expect(utils.getByText(exp.type)).toBeInTheDocument();
+      expect(utils.getByText(exp.overview)).toBeInTheDocument();
 
-      exp.duties.forEach((duty) => {
-        expect(utils.getByText(duty)).toBeInTheDocument();
+      exp.highlights.forEach((highlight) => {
+        expect(utils.getByText(highlight)).toBeInTheDocument();
       });
 
       exp.technologies.forEach((tech) => {
