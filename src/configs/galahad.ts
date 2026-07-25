@@ -42,7 +42,7 @@ export const links = [
     name: "LinkedIn",
     icon: Linkedin,
     alt: "linkedin icon",
-    url: "www.linkedin.com/in/galahad-zhao-6193b0353",
+    url: "https://www.linkedin.com/in/galahad-zhao-6193b0353",
     hover_color: "hover:text-[#0077B5]",
   },
   {
@@ -65,15 +65,15 @@ export const educations = [
   {
     institution: "Algonquin College",
     program: "Computer Programming",
-    degree: "Ontario College Diploma",
-    location: "Ottawa, Canada",
-    period: "2024 - 2026",
+    degree: "Ontario College Diploma with Honours",
+    location: "Ottawa, ON, Canada",
+    period: "2024 – 2026",
     description:
-      "Developed strong skills in full-stack development, mobile programming, and database design. Achieved Dean’s List recognition for academic excellence.",
+      "Developed practical skills in software development, database design, mobile application development, and object-oriented programming. Earned Dean’s List recognition for academic achievement.",
     courses: [
-      "Advanced Database",
-      "OOP with Design Patterns",
-      "Mobile Graphical Interface Programming",
+      "Advanced Database Topics",
+      "Object-Oriented Programming with Design Patterns",
+      "Mobile Application Development",
       "Business Programming (COBOL)",
       "Network Programming",
     ],
@@ -81,11 +81,11 @@ export const educations = [
   {
     institution: "Peking University Founder Technology College",
     program: "Information Security",
-    degree: "Associate's Degree",
+    degree: "College Diploma",
     location: "Beijing, China",
-    period: "2009 - 2012",
+    period: "2009 – 2012",
     description:
-      "Gained a strong foundation in computer systems, programming, and network security. Developed hands-on skills in C programing, and Cisco network configuration through practical lab work and projects.",
+      "Built a foundation in computer systems, programming, networking, and information security through hands-on coursework and technical lab projects.",
     courses: [
       "Operating Systems",
       "Cisco Networking",
@@ -98,42 +98,97 @@ export const educations = [
 
 export const skillsets = [
   {
-    category: "Programming Languages & Frameworks",
+    category: "Languages",
     skills: [
       "Python",
       "TypeScript",
       "Java",
       "C++",
-      "COBOL",
-      "React",
-      "Requests",
-      "FastAPI",
-      "Spring Boot",
     ],
   },
+
   {
-    category: "Database & Lakehouse",
+    category: "Frameworks & Libraries",
     skills: [
-      "PostgreSQL",
-      "MongoDB",
-      "Redis",
+      "React",
+      "FastAPI",
+      "Spring Boot",
+      "Requests",
+    ],
+  },
+
+  {
+    category: "Cloud Platforms",
+    skills: [
+      "AWS",
+      "Google Cloud",
+      "Microsoft Azure",
+      "Alibaba Cloud",
+    ],
+  },
+
+  {
+    category: "Cloud Services",
+    skills: [
+      "Amazon ECS",
+      "AWS Lambda",
+      "Amazon S3",
+      "Amazon RDS",
+      "Amazon EventBridge",
+      "Amazon SQS",
+      "Amazon SNS",
+      "Amazon API Gateway",
+      "AWS Glue",
+    ],
+  },
+
+  {
+    category: "DevOps",
+    skills: [
+      "Docker",
+      "Kubernetes",
+      "GitHub Actions",
+      "GitLab CI/CD",
+    ],
+  },
+
+  {
+    category: "Observability",
+    skills: [
+      "Datadog",
+      "Sumo Logic",
+      "Site24x7",
+    ],
+  },
+
+  {
+    category: "Data Platforms",
+    skills: [
       "Snowflake",
       "Google BigQuery",
       "Amazon Redshift",
-      "AWS S3",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
     ],
   },
+
   {
-    category: "Data Analytics & Visualization",
-    skills: ["Tableau", "Google Data Studio", "Microsoft Power BI"],
+    category: "Identity & Security",
+    skills: [
+      "Okta",
+      "Microsoft Entra ID",
+      "Cisco Duo",
+    ],
   },
+
   {
-    category: "Cloud Platforms & SIEM Tools",
-    skills: ["AWS", "MS Azure", "GCP", "DataDog", "SumoLogic", "Site24x7"],
-  },
-  {
-    category: "DevOps",
-    skills: ["Docker", "Kubernetes", "GitHub Actions", "GitLab CI/CD"],
+    category: "Analytics",
+    skills: [
+      "Tableau",
+      "Power BI",
+      "Looker Studio",
+    ],
   },
 ];
 
@@ -144,20 +199,16 @@ export const experiences = [
     location: "Beijing, China",
     period: "Oct 2020 - Aug 2024",
     type: "Full-time Permanent",
-    duties: [
-      "Designed and built a cross-team automated onboarding backend in TypeScript (Node.js), integrated with Okta, Azure AD, and DUO APIs.",
-      "Streamlined logs from SaaS, infrastructure, and endpoint systems into SumoLogic and DataDog, enabling real-time analytics dashboards.",
-      "Built a dynamic cost-reduction tool in TypeScript, reducing AWS WorkSpaces bills by ~50% over 3 months.",
-      "Re-architected legacy systems using AWS Glue (Python), S3, and Snowflake to build scalable ETL pipelines.",
+    overview: "Worked as a Platform and DevOps Engineer responsible for enterprise cloud platforms, automation, and internal engineering tools. Designed cloud infrastructure across AWS, GCP, and Alibaba Cloud while building self-service platforms and automation solutions that improved engineering productivity and streamlined cross-functional business operations.",
+    highlights: [
+      "Designed and built an enterprise onboarding backend in TypeScript, integrating Okta, Microsoft Entra ID, and Cisco Duo APIs.",
+      "Developed self-service deployment workflows using GitHub Actions and Slack bots.",
+      "Built an automated AWS WorkSpaces cost optimization platform, reducing operating costs by approximately 50%.",
+      "Designed enterprise workflow automation integrating HR, Finance, Security, and IT systems.",
+      "Supported cloud migration, observability, and data engineering initiatives across multiple cloud platforms."
     ],
     technologies: [
-      "AWS",
-      "GCP",
-      "TypeScript",
-      "Docker",
-      "PostgreSQL",
-      "DataDog",
-      "Tableau",
+      "AWS", "GCP", "Alibaba", "TypeScript", "GitHub Actions", "Docker", "Snowflake", "Amazon ECS", "EventBridge", "Okta"
     ],
   },
   {
@@ -166,13 +217,28 @@ export const experiences = [
     location: "Beijing, China",
     period: "Nov 2017 - Apr 2020",
     type: "Full-time Permanent",
-    duties: [
-      "Maintained IT infrastructure across AWS offices in China and supported secure operations inside DataCenter facilities.",
-      "Developed internal tools to monitor SLA performance, automate device compliance in high-security zones, and reduce hardware loss.",
-      "Led the cloud-side development of a monitoring and rescue service using AWS Lambda, API Gateway, RDS, and more.",
-      "Built a lightweight data visualization solution for the Amazon Kindle (Lab126) team to improve their supply chain operations and helped them transition to Tableau for analytics.",
+    overview: "Supported AWS internal engineering teams by operating enterprise IT infrastructure and developing cloud-based automation tools. Worked across AWS services and Python to build internal platforms, improve operational efficiency, and support engineering initiatives for corporate offices and data center operations.",
+    highlights: [
+      "Served as the local service owner for multiple AWS global systems, maintaining enterprise IT infrastructure and supporting secure operations across AWS offices and data centers in China.",
+      "Developed internal automation tools to monitor SLA performance, enforce device compliance in high-security environments, and reduce hardware loss.",
+      "Designed and implemented cloud infrastructure for an internal monitoring and rescue platform using AWS Lambda, API Gateway, Amazon RDS, S3, SNS, SQS, and other AWS services.",
+      "Built a lightweight web-based data visualization platform for the Amazon Kindle (Lab126) team, replacing spreadsheet-based workflows and later supporting their migration to Tableau.",
     ],
-    technologies: ["AWS", "Python", "MySQL", "JavaScript", "MongoDB", "Vue.js"],
+    technologies: [
+      "AWS",
+      "Python",
+      "JavaScript",
+      "Vue.js",
+      "Amazon RDS",
+      "Amazon S3",
+      "AWS Lambda",
+      "API Gateway",
+      "Amazon SNS",
+      "Amazon SQS",
+      "MongoDB",
+      "MySQL",
+      "Tableau"
+    ],
   },
   {
     title: "VIP Support Engineer",
@@ -180,13 +246,20 @@ export const experiences = [
     location: "Beijing, China",
     period: "Aug 2016 - Oct 2017",
     type: "Full-time Contract",
-    duties: [
-      "Provided technical support to the bank’s senior leadership, including directors, VPs, and the president, ensuring reliable hardware, software, and network operation.",
-      "Supported the rollout of a digital meeting system to reduce paper usage as part of the bank’s carbon emission goals.",
-      "Developed a Java program to automate weekly IT reporting, saving hours of manual work.",
-      "Assisted third-party development teams in setting up secure environments with Jenkins CI/CD servers, databases, and Nginx, in line with strict internal security policies.",
+    overview: "Provided executive IT support within one of China's largest policy banks while improving operational efficiency through automation and software development. This role marked my transition from enterprise IT operations into software engineering by applying programming to solve business and infrastructure challenges.",
+    highlights: [
+      "Delivered technical support for senior executives, directors, and the bank president, maintaining reliable hardware, software, and network services in a highly regulated financial environment.",
+      "Developed a Java application that automated weekly operational reporting by consolidating data from multiple internal systems, reducing report preparation time from several hours to approximately 15 minutes.",
+      "Supported the rollout of a paperless digital meeting platform as part of the bank's environmental sustainability initiative.",
+      "Diagnosed infrastructure issues affecting a third-party Jenkins deployment, coordinated cross-department communication, and helped establish a secure development environment compliant with internal security policies.",
     ],
-    technologies: ["JAVA", "Linux", "Jenkins", "GitHub", "GitLab"],
+    technologies: [
+      "Java",
+      "Linux",
+      "Jenkins",
+      "Nginx",
+      "Git",
+    ],
   },
   {
     title: "IT Specialist",
@@ -194,13 +267,26 @@ export const experiences = [
     location: "Beijing, China",
     period: "Oct 2012 - Jun 2016",
     type: "Full-time Contract",
-    duties: [
-      "Supported IT infrastructure and daily operations at DHL’s logistics hub near Beijing International Airport.",
-      "Provided technical support to over 60 call center and customs agents.",
-      "Maintained servers, network devices, and printers, ensuring stable system performance.",
-      "Planned and deployed WiFi coverage throughout the warehouse to support mobile terminals used for package scanning and logistics tracking.",
+    overview: "Supported enterprise IT infrastructure for DHL's Northern China logistics center near Beijing Capital International Airport. Worked across servers, networking, warehouse systems, and global infrastructure projects while ensuring reliable IT operations for logistics and customer service teams.",
+    highlights: [
+      "Supported enterprise IT operations for approximately 70 employees, maintaining Windows servers, Active Directory, Cisco networking equipment, enterprise services, printers, and automated parcel sorting systems.",
+      "Led the local implementation of multiple global infrastructure projects, deploying HP servers, Cisco switches, wireless controllers, and more than 40 Motorola handheld devices while coordinating with engineering teams in Germany.",
+      "Configured Windows Server, Active Directory, DNS, DHCP, file services, and network infrastructure to support daily warehouse and office operations.",
+      "Investigated warehouse Wi-Fi coverage issues through on-site analysis, identified signal dead zones inside the steel warehouse, proposed additional access point placement, and improved wireless connectivity for handheld logistics terminals.",
+      "Supported Windows CE-based Motorola handheld devices used for barcode scanning and parcel tracking across warehouse operations.",
+      "Maintained mission-critical IT systems supporting automated parcel sorting, helping ensure uninterrupted logistics operations."
     ],
-    technologies: ["Cisco Networking", "Windows Server", "Active Directory"],
+    technologies: [
+      "Windows Server",
+      "Active Directory",
+      "Cisco Networking",
+      "Cisco Wireless",
+      "Windows CE",
+      "Motorola Handheld",
+      "Enterprise Wi-Fi",
+      "DNS",
+      "DHCP"
+    ],
   },
 ];
 
@@ -278,59 +364,42 @@ export const certificates = [
 ];
 
 export const holdings = {
-  lastUpdate: "December 2025",
+  lastUpdate: "July 2026",
   assetAllocation: [
     {
-      code: "NASDAQ:BMNU",
-      link: "https://www.google.com/finance/quote/BMNU:BATS",
-      percentage: 18,
-      color: "bg-blue-500",
-    },
-    {
-      code: "NASDAQ:LAES",
-      link: "https://www.google.com/finance/quote/LAES:NASDAQ",
-      percentage: 10,
-      color: "bg-emerald-500",
-    },
-    {
-      code: "NASDAQ:MARA",
-      link: "https://www.google.com/finance/quote/MARA:NASDAQ",
-      percentage: 15,
+      code: "NYSE:ORCL",
+      link: "https://www.google.com/finance/beta/quote/ORCL:NYSE",
+      percentage: 70,
       color: "bg-purple-500",
     },
     {
-      code: "NASDAQ:SERV",
-      link: "https://www.google.com/finance/quote/SERV:NASDAQ",
-      percentage: 13,
-      color: "bg-amber-500",
+      code: "NYSE:SOXL",
+      link: "https://www.google.com/finance/beta/quote/SOXL:NYSEARCA",
+      percentage: 17,
+      color: "bg-blue-500",
     },
     {
-      code: "NYSE:VG",
-      link: "https://www.google.com/finance/quote/VG:NYSE",
-      percentage: 44,
-      color: "bg-rose-500",
+      code: "NYSE:SMR",
+      link: "https://www.google.com/finance/beta/quote/SMR:NYSE",
+      percentage: 13,
+      color: "bg-emerald-500",
     },
   ],
   sectorAllocation: [
     {
-      name: "Energy",
-      percentage: 44,
-      color: "bg-indigo-500",
-    },
-    {
-      name: "Crypto Infrastructure",
-      percentage: 34,
-      color: "bg-teal-500",
-    },
-    {
-      name: "Machinery",
-      percentage: 12,
-      color: "bg-orange-500",
+      name: "Technology",
+      percentage: 70,
+      color: "bg-pink-500",
     },
     {
       name: "Semiconductors",
-      percentage: 10,
-      color: "bg-pink-500",
+      percentage: 17,
+      color: "bg-teal-500",
+    },
+    {
+      name: "Energy",
+      percentage: 13,
+      color: "bg-indigo-500",
     },
   ],
 };
